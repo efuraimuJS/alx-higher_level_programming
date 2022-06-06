@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 if __name__ == "__main__":
     from sys import argv
     if len(argv) != 4:
