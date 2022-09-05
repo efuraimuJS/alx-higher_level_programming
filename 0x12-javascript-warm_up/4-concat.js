@@ -1,2 +1,11 @@
 #!/usr/bin/node
-console.log(process.argv[2] + " is " + process.argv[3]);
+
+const myVar = process.argv.slice(2);
+
+if (myVar.length === 1) {
+  console.log(myVar[0] + ' is undefined');
+} else if (myVar.length > 1) {
+  console.log(myVar[0] + ' is ' + myVar[1]);
+} else {
+  console.log('undefined is undefined');
+}
