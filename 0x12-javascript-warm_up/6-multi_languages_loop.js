@@ -1,7 +1,5 @@
 #!/usr/bin/node
-const myVar = ['C is fun', 'Python is cool', 'Javascript is amazing'];
-let i;
-
-for (i in myVar) {
-  console.log(myVar[i]);
+const s = ['C is fun', 'Python is cool', 'Javascript is amazing'];
+for (let i = 0; i < 3; i++) {
+  console.log(s[i]);
 }
