@@ -1,10 +1,8 @@
 #!/usr/bin/node
-
-const fs = require('fs');
-
-const contentA = fs.readFileSync(process.argv[2], 'utf8', function (err, result) { if (err) console.log('error', err); });
-const contentB = fs.readFileSync(process.argv[3], 'utf8', function (err, result) { if (err) console.log('error', err); });
-
-const contentC = contentA.concat(contentB);
-
-fs.writeFile(process.argv[4], contentC, 'utf8', function (err, result) { if (err) console.log('error', err); });
+let fileA = process.argv[2];
+let fileB = process.argv[3];
+let fileC = process.argv[4];
+let fs = require('fs');
+let textA = fs.readFileSync(fileA, 'utf8');
+let textB = fs.readFileSync(fileB, 'utf8');
+fs.writeFileSync(fileC, textA + textB);
